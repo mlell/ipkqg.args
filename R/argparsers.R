@@ -332,7 +332,7 @@ wrap <- function(arg, like = NULL, default = FALSE){
 }
 # ... = ignore arguments going to argparsers (we and they get the same arg list)
 unwrap <- function(arg, print = FALSE, ...){
-  if(print) prPretty::dataSummary(arg$value)
+  if(print) dataSummary(arg$value)
   return(arg$value)
 }
 
@@ -344,6 +344,6 @@ is_default <- function(arg)
 # Handle argument printing
 .print_arg <- function(x, print = FALSE, ...){
   if(!print) return(invisible())
-  prPretty::dataSummary(x)
+  dataSummary(x)
 }
 

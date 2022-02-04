@@ -48,12 +48,11 @@
 #' ## -attr(, "test")
 #' ## [1] "hello"
 #'
-#' @import assertthat
 #' @import stringr
 #' @export
 
 getKVArgs <- function(args = commandArgs(TRUE)){
-  assert_that(is.character(args))
+  if(!is.character(args)) stop("args= must be character")
 
   setL <- function(x, path, val, basePath = NULL){ # basePath just for error msg
     basePath <- c(basePath, path[1])

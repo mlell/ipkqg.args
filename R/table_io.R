@@ -2,6 +2,8 @@
 #'
 #' @export
 load_table <- function(filename){
+  if(!requireNamespace("tibble"))
+    stop("Cannot read tables without the tibble package installed. Install 'tibble' or do not use read=TRUE")
   tibble::as_tibble(fst::read_fst(filename), .name_repair = identity)
 }
 
