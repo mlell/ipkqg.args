@@ -1,6 +1,6 @@
-Package: prIO
-Version: 0.0
-Description: Utilities to define script in and outputs
+Package: ipkqg.args
+Version: 1.0
+Description: Parse command line arguments of the form KEY=VALUE
 Imports:
   stringr
 Suggests:
