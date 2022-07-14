@@ -9,7 +9,7 @@ Example:
 ```r
 # R script "myscript.R"
 library(ipkqg.args)
-ARGS <- getKWArgs()
+ARGS <- getKVArgs()
 
 number <- arg_int(ARGS, "number")
 path <- arg_filename(ARGS, exists = TRUE)
