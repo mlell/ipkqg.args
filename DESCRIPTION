@@ -5,6 +5,8 @@ Imports:
   stringr
 Suggests:
   tibble
+  qs
+  fst
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
