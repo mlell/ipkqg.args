@@ -11,7 +11,7 @@ save_image(filename, envir = .GlobalEnv, all = FALSE, ...)
 
 \item{envir}{Environment to save}
 
-\item{...}{Arguments to \code{\link[qs:qsave]{qs::qsave()}}}
+\item{...}{Arguments to \code{qs::qsave()}}
 }
 \description{
 Save the global environment

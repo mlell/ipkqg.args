@@ -4,8 +4,8 @@ Description: Utilities to define script in and outputs
 Imports:
   stringr
 Suggests:
-  tibble
-  qs
+  tibble,
+  qs,
   fst
 Encoding: UTF-8
 RoxygenNote: 7.1.1

@@ -18,7 +18,7 @@ save_table <- function(x, filename){
 #'
 #' @param filename File to write to
 #' @param envir Environment to save
-#' @param ... Arguments to [qs::qsave()]
+#' @param ... Arguments to `qs::qsave()`
 #'
 #' @export
 save_image <- function(filename, envir = .GlobalEnv, all = FALSE, ...){
@@ -33,7 +33,7 @@ save_image <- function(filename, envir = .GlobalEnv, all = FALSE, ...){
 #'
 #' @param filename File to read
 #' @param envir Environment to write into
-#' @param ... Arguments to [qs::qread()]
+#' @param ... Arguments to `qs::qread()`
 #'
 #' @export
 load_image <- function(filename, envir = .GlobalEnv, ...){
