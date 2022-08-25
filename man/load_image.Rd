@@ -11,7 +11,7 @@ load_image(filename, envir = .GlobalEnv, ...)
 
 \item{envir}{Environment to write into}
 
-\item{...}{Arguments to \code{\link[qs:qread]{qs::qread()}}}
+\item{...}{Arguments to \code{qs::qread()}}
 }
 \description{
 Load an environment
