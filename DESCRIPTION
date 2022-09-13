@@ -1,5 +1,5 @@
 Package: ipkqg.args
-Version: 1.1
+Version: 1.2
 Description: Parse command line arguments of the form KEY=VALUE
 Imports:
   stringr
