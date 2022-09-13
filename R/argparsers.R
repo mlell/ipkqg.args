@@ -209,7 +209,7 @@ arg_filename <- function(
   }else if(is_true(read)){
     ext = if(grepl("\\.",u)) sub("(.*\\.)([^.]+)$","\\2",u) else ""
     r <- switch(ext,
-      fst = prIO::load_table(u),
+      fst = load_table(u),
       qs  = qs::qread(u),
       stop("Cannot handle file extension '", ext,"'"))
     if(!is.null(attr(u, "extract"))){
