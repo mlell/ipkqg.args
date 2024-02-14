@@ -12,6 +12,7 @@
 \alias{arg_logical}
 \alias{arg_list}
 \alias{arg_filename}
+\alias{arg_json}
 \title{Expect arguments with certain format}
 \usage{
 arg_any(ARGV, name = NULL, default, print = FALSE)
@@ -43,6 +44,8 @@ arg_filename(
   read = FALSE,
   dash = NULL
 )
+
+arg_json(ARGV, name = NULL, ..., simplify = FALSE)
 }
 \arguments{
 \item{ARGV}{(All functions) The output of \code{\link[=getKVArgs]{getKVArgs()}}}
@@ -68,6 +71,8 @@ R object is returned instead of the file name.}
 \item{dash}{(character scalar) If not NULL a dash input denotes standard
 input (value "stdin") or output (value "stdout"). A file object for the
 respective stream (file("stdin") or stdout()) is returned. If}
+
+\item{simplify}{(bool) Whether to turn lists of scalars into vectors}
 }
 \description{
 Define the expected command line arguments of a script and check their
@@ -101,6 +106,8 @@ the arguments.
 \item \code{arg_list}: Expect a character that is a list (\verb{arg:X=1 arg:Y=2})
 
 \item \code{arg_filename}: Expect a file name. Optionally check file attributes and read the file
+
+\item \code{arg_json}: Expect a JSON string.
 }}
 
 \examples{

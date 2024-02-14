@@ -221,6 +221,31 @@ arg_filename <- function(
   return(wrap(r, like = arg))
 }
 
+#' @describeIn argparsers Expect a JSON string.
+#' 
+#' @param simplify (bool) Whether to turn lists of scalars into vectors
+#' @export
+arg_json <- function(
+    ARGV, name = NULL, ..., simplify = FALSE
+){
+    unwrap(.arg_json(
+      ARGV = ARGV, name = name, ..., simplify = simplify),
+      ...)
+}
+.arg_json <- function(
+  ARGV, name = NULL, ..., simplify = FALSE
+){
+  if(!requireNamespace("jsonlite", quietly = TRUE))
+    stop("jsonlite package required for arg_json()")
+  
+  pname <- printArgName(ARGV, name)
+  arg <- .arg_string(ARGV, name, ...)
+  u <- unwrap(arg)
+  if(is_default(arg)) return(arg)
+  r <- jsonlite::parse_json(u, simplifyVector = simplify)
+  
+  return(wrap(r, like = arg))
+}
 # Multiple arguments -----------------------------------------------------
 
 #' Parse multiple arguments
